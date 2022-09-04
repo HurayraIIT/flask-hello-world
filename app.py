@@ -10,6 +10,11 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/s3cr3t')
+def s3cr3t():
+    return render_template('s3cr3t.html')
+
+
 @app.route('/robots.txt')
 def static_from_root():
     return send_from_directory(app.static_folder, request.path[1:])
